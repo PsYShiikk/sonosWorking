@@ -380,7 +380,7 @@ button > img, .btn_like > img, .btn_add_playlist > img{
 .footer{margin-bottom: 100px;
     width: 100%;
     height: 200px;
-    background: #7A89F7;
+    background: linear-gradient(270deg, #BF85ED 0%, #428DFF 0.01%, #BF85ED 100%);
     display: flex;
     flex-direction: column;
     justify-content: center;
