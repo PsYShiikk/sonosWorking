@@ -1,4 +1,4 @@
-$(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container');
+
 
 
 $('.txtb input').ready( function () {
@@ -197,6 +197,9 @@ button2.addEventListener( "click", function( event ) {
 fileInput2.addEventListener( "change", function( event ) {
     the_return2.innerHTML = this.value;
 });
+
+
+$(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container');
 
 
 

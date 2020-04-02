@@ -82,6 +82,12 @@ class FirstController extends Controller
         return back();
     }
 
+    public function changementprofil($id){
+        $u = User::findOrFail($id);
+
+        return view("firstcontroller.changementprofil", ['utilisateur' => $u]);
+    }
+
 
 
 }

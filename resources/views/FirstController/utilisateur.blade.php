@@ -3,6 +3,9 @@
 @section('contenu')
 
     <div class="top_user_page">
+        @if(Auth::id() == $utilisateur->id)
+        <a href="/changementprofil/{{$utilisateur->id}}" class="modify_profil" data-pjax>a</a>
+        @endif
         <div class="info_user">
             <img src="{{$utilisateur->avatar}}" alt="photo de {{$utilisateur->username}}" class="photo_de_profil">
             <span >{{$utilisateur->forename}} {{$utilisateur->lastname}}</span>

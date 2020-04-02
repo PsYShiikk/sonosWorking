@@ -23,3 +23,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/legalnotice', 'FirstController@mentionslegales');
 Route::get('/like/{id}', 'FirstController@like')->where('id', '[0-9]+')->middleware('auth');
+Route::get('/changementprofil/{id}', 'FirstController@changementprofil')->where('id', '[0-9]+')->middleware('auth');
