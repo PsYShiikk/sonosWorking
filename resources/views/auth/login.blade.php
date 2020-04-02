@@ -9,7 +9,7 @@
 
 
                                 <div class="txtb">
-                                    <input type="email" class="@error('email') focus error @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                    <input type="email" class="@error('email') focus error @enderror" name="email" value="{{ old('email') }}" required autocomplete="off">
                                     <span data-placeholder="Mail"></span>
                                 </div>
 
@@ -26,7 +26,7 @@
 
 
                                 <div class="txtb">
-                                    <input type="password" class="@error('password') focus error @enderror" name="password" required autocomplete="current-password">
+                                    <input type="password" class="@error('password') focus error @enderror" name="password" required autocomplete="offs">
                                     <span data-placeholder="Password"></span>
                                 </div>
                                 @error('password')

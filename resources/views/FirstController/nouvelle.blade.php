@@ -19,12 +19,12 @@
         @csrf
     <div class="ligneform">
         <div class="txtb">
-            <input type="text" class="@error('nom') focus error @enderror" name="nom" value="{{ old('nom') }}" required>
+            <input type="text" class="@error('nom') focus error @enderror" name="nom" value="{{ old('nom') }}" required autocomplete="off">
             <span data-placeholder="Title"></span>
         </div>
 
         <div class="txtb">
-            <input type="text" class="@error('nom') focus error @enderror" name="style" value="{{ old('style') }}" required>
+            <input type="text" class="@error('nom') focus error @enderror" name="style" value="{{ old('style') }}" required autocomplete="off">
             <span data-placeholder="Style"></span>
         </div>
     </div>

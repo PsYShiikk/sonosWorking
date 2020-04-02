@@ -10,7 +10,7 @@
 
 
                                 <div class="txtb">
-                                    <input id="username" type="text" class="form-control @error('username') error focus @enderror" name="username" value="{{ old('username') }}" required autocomplete="username">
+                                    <input id="username" type="text" class="form-control @error('username') error focus @enderror" name="username" value="{{ old('username') }}" required autocomplete="off">
                                     <span data-placeholder="Username"></span>
                                 </div>
 
@@ -24,7 +24,7 @@
                                 <div class="two_field">
 
                                     <div class="txtb half">
-                                        <input id="forename" type="text" class="form-control @error('forename') error focus @enderror" name="forename" value="{{ old('forename') }}" required autocomplete="forename">
+                                        <input id="forename" type="text" class="form-control @error('forename') error focus @enderror" name="forename" value="{{ old('forename') }}" required autocomplete="off">
                                         <span data-placeholder="Forename"></span>
                                     </div>
 
@@ -36,7 +36,7 @@
                                     @enderror
 
                                     <div class="txtb half">
-                                        <input id="lastname" type="text" class="form-control @error('lastname') error focus @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname">
+                                        <input id="lastname" type="text" class="form-control @error('lastname') error focus @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="off">
                                         <span data-placeholder="Lastname"></span>
                                     </div>
 
@@ -54,7 +54,7 @@
 
 
                         <div class="txtb">
-                            <input type="email" class="@error('email') focus error @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                            <input type="email" class="@error('email') focus error @enderror" name="email" value="{{ old('email') }}" required autocomplete="off">
                             <span data-placeholder="Mail"></span>
                         </div>
 
@@ -68,7 +68,7 @@
 <div class="two_field">
 
                         <div class="txtb half">
-                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="off">
                             <span data-placeholder="Password"></span>
                         </div>
                         @error('password')
@@ -78,7 +78,7 @@
                         @enderror
 
                         <div class="txtb half">
-                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="off">
                             <span data-placeholder="Password"></span>
                         </div>
 </div>
