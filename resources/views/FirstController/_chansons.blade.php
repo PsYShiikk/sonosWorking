@@ -5,11 +5,11 @@
             <div class="img_music">
                 <div class="overlaymusic chanson" data-img="{{$c->coverurl}}" data-file="{{$c->url}}" data-author="{{$c->utilisateur->username}}" data-id="{{$c->id}}" data-name="{{$c->nom}}" data-liked="
             @auth()
-                @if(Auth::user()->jeLike->contains($c->id))
-                    false
-@else
+                @if(Auth::user()->jeLike()->contains($c->id))
                     true
-@endif
+                @else
+                    false
+                @endif
                 @endauth">
                     <div class="playbutton">
                         <img src="/images/icones/play.png" alt="playbutton">

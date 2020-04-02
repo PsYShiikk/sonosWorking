@@ -40,7 +40,6 @@ body{
     height: 60px;
     width: 60px;
     border-radius: 50%;
-    background: red;
     position: relative;
     display: flex;
     justify-content: center;
@@ -943,6 +942,15 @@ padding: 10px 40px 10px 20px;
     text-align: center;
     margin-top: 20px;
 
+}
+
+.container_changementprofil{
+    width: 50%;
+    margin:100px auto 0px auto;
+}
+
+.container_changementprofil > h2{
+    margin-bottom: 80px ;
 }
 
 
