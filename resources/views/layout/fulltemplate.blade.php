@@ -16,7 +16,7 @@
         <img src="/images/logo/logo_blanc.png" class="logo_loader">
     </div>
 </div>
-<main data-barba="container" data-barba-namespace="home">
+
 <div class="all_template">
 <div class="container_all">
 
@@ -38,7 +38,7 @@
                     </defs>
                 </svg>
             </a>
-            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+            <a onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
                 <img src="/images/icones/icon_logout.png" alt="logout" class="icon_header">
 
@@ -48,7 +48,7 @@
 
 
     </header>
-
+    <main data-barba="container" data-barba-namespace="home">
     <nav>
 
 
