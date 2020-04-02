@@ -1,25 +1,6 @@
 
+//$(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container');
 
-
-$('.txtb input').ready( function () {
-    if ($(this).val() !== "")
-
-        $(this).addClass('focus');
-});
-
-$('.txtb input').on('focus', function () {
-    $(this).addClass('focus');
-
-});
-
-$('.txtb input').on('blur', function () {
-    if ($(this).val() == "")
-    $(this).removeClass('focus error');
-
-
-});
-
-console.log('coucou');
 
 
 let fillBar = document.getElementById("fill");
@@ -29,8 +10,29 @@ let volume = document.getElementById('volume');
 let icosound = document.getElementById('soundicon');
 let song = new Audio();
 
-
 $(document).ready(function () {
+
+    $('.txtb input').ready( function () {
+        if ($(this).val() !== "")
+            console.log('clique');
+            $(this).addClass('focus');
+    });
+
+    $('body').on('focus','.txtb input', function () {
+        $(this).addClass('focus');
+        console.log('clique');
+    });
+
+    $('body').on('blur','.txtb input', function () {
+        if ($(this).val() == "")
+            $(this).removeClass('focus error');
+        console.log('clique');
+
+    });
+
+
+
+
     $('.button_player').hide();
     $('.cover_music').hide();
     $('.sound_player').hide();
@@ -199,7 +201,7 @@ fileInput2.addEventListener( "change", function( event ) {
 });
 
 
-$(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container');
+
 
 
 

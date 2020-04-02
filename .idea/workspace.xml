@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="de6d9d92-b3fc-48d8-bf6e-aaf155e69f0c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FirstController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FirstController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/master.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/master.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/divers.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/divers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/FirstController/mesmusiques.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FirstController/mesmusiques.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/FirstController/utilisateur.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FirstController/utilisateur.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +149,7 @@
       <workItem from="1584440369433" duration="5623000" />
       <workItem from="1585642473037" duration="3000" />
       <workItem from="1585751188489" duration="235000" />
-      <workItem from="1585811112544" duration="272000" />
+      <workItem from="1585811112544" duration="3761000" />
     </task>
     <servers />
   </component>
@@ -170,5 +165,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="610" y="458" key="NewPhpFileDialog/0.0.1536.864/1920.0.1600.900@0.0.1536.864" timestamp="1584444845860" />
+    <state x="485" y="225" key="git4idea.merge.GitPullDialog" timestamp="1585815278078">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="485" y="225" key="git4idea.merge.GitPullDialog/0.0.1536.864/1920.0.1600.900@0.0.1536.864" timestamp="1585815278078" />
   </component>
 </project>
