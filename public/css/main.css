@@ -1,0 +1,33 @@
+.loading-screen {
+   position: relative;
+   padding-left: 0;
+   padding-right: 0;
+   padding-top: 0;
+   background: linear-gradient(270deg, #BF85ED 0%, #428DFF 0.01%, #BF85ED 100%);
+   width: 100%;
+   height: 100%;
+   transform: scaleY(0) skewX(0);
+   transform-origin: top left;
+ }
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.logo_loader{
+    position: absolute;
+    top: 40%;
+    left: -20vw;
+    width: 10vw;
+    background-image: url("../pics/logos/logo_denis_blanc.svg");
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}

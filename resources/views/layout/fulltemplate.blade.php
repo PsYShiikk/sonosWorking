@@ -5,11 +5,18 @@
     <title>Sonos - The brand new music platform</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="/css/main.css">
     <link
         href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:200,300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
 </head>
-<body>
+<body data-barba="wrapper">
+<div class="loading-container">
+    <div class="loading-screen">
+        <img src="/images/logo/logo_blanc.png" class="logo_loader">
+    </div>
+</div>
+<main data-barba="container" data-barba-namespace="home">
 <div class="all_template">
 <div class="container_all">
 
@@ -49,8 +56,7 @@
 
             <div class="main" id="pjax-container">
 
-                @yield('contenu')
-
+                    @yield('contenu')
 
             </div>
 
@@ -73,7 +79,7 @@
     </div>
 
 </div>
-
+</main>
     <div class="player">
         <div class="sound_desc_player">
             <div class="cover_music">
@@ -120,8 +126,23 @@
     @csrf
 </form>
 </div>
+
 </body>
 <script src="/js/jquery.js"></script>
 <script src="/js/jquery.pjax.js"></script>
 <script src="/js/divers.js"></script>
+
+
+
+
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- Barba Core -->
+<script src="https://unpkg.com/@barba/core"></script>
+<!-- GSAP for animation -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+<!-- Some basic helper functions -->
+<script src="/js/helper.js"></script>
+<!-- Main JS file -->
+<script src="/js/main.js"></script>
 </html>

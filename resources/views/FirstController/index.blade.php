@@ -1,6 +1,7 @@
 @extends('layout.accueil')
 
 @section('contenu')
+
     <div class="first_text_home">
         <div class="text_home_div">
             <span class="text_home">Sonos is a brand new <span class="shadow">music platform</span></span>
@@ -32,5 +33,4 @@
             <a href="/register" class="startnow">Start now !</a>
         </div>
     </div>
-
 @endsection
