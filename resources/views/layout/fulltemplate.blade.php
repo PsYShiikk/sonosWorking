@@ -11,9 +11,16 @@
         rel="stylesheet">
 </head>
 <body data-barba="wrapper">
+<?php if (isset($_GET['first'])){  ?>
+
+<div id="loader_get">
+    <img src="/images/logo/logo_blanc.png" class="logo_loader">
+</div>
+
+<?php } ?>
+
 <div class="loading-container">
     <div class="loading-screen">
-        <img src="/images/logo/logo_blanc.png" class="logo_loader">
     </div>
 </div>
 
@@ -133,6 +140,11 @@
 <script src="/js/divers.js"></script>
 
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+    setInterval("$(\"#loader_get\").css( \"top\",\"-1000px\");", 1000);
+</script>
 
 
 <!-- JQuery -->

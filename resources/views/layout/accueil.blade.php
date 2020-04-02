@@ -12,7 +12,6 @@
 <body data-barba="wrapper">
 <div class="loading-container">
     <div class="loading-screen">
-            <img src="/images/logo/logo_blanc.png" class="logo_loader">
     </div>
 </div>
 <main data-barba="container" data-barba-namespace="home">
