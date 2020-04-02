@@ -417,6 +417,7 @@ button > img, .btn_like > img, .btn_add_playlist > img{
     align-items: center;
 }
 .rightheader{
+    width: 20%;
     align-items: center;
     display: flex;
     justify-content: space-between;
