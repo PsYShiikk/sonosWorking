@@ -88,6 +88,12 @@ class FirstController extends Controller
         return view("firstcontroller.changementprofil", ['utilisateur' => $u]);
     }
 
+    public function search($s){
+        $user = User::whereRaw("username like concat('%',?,'%')",[$s])->get();
+        $music = Chanson::whereRaw("nom like concat('%',?,'%')",[$s])->get();
+        return view("firstcontroller.search", ['music' => $music ,'user' => $user]);
+
+    }
 
 
 }
