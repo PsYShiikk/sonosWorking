@@ -3,11 +3,13 @@
 @section('contenu')
 
     <div class="top_user_page">
+        <img src="{{$utilisateur->banner}}" alt="banner de {{$utilisateur->username}}" class="banner">
         @if(Auth::id() == $utilisateur->id)
-        <a href="/changementprofil/{{$utilisateur->id}}" class="modify_profil" data-pjax>a</a>
+        <a href="/changementprofil/{{$utilisateur->id}}" class="modify_profil" data-pjax><img src="/images/icones/icon_modify.png" alt="icon modifier"></a>
         @endif
         <div class="info_user">
-            <img src="{{$utilisateur->avatar}}" alt="photo de {{$utilisateur->username}}" class="photo_de_profil">
+            <div class="pdp"><img src="{{$utilisateur->avatar}}" alt="photo de {{$utilisateur->username}}" class="photo_de_profil"></div>
+
             <span >{{$utilisateur->forename}} {{$utilisateur->lastname}}</span>
             <div><span>@</span>{{ $utilisateur->username }}</div>
             <div>

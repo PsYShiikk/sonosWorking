@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Relations;
 
 class User extends Authenticatable
 {
@@ -53,6 +54,6 @@ class User extends Authenticatable
     }
 
     public function jeLike(){
-        return $this->belongsToMany("App\User", "likes", "user_id", "music_id");
+        return $this->belongsToMany("App\Chanson", "likes", "user_id", "music_id");
     }
 }

@@ -2,11 +2,24 @@
 
 
 @section('contenu')
+
+@if($utilisateur->id == Auth::id())
 <div class="container_changementprofil">
+
+    @if ($errors->any())
+        <div>
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <h2 class="center">Informations of {{$utilisateur->username}}</h2>
-    <form action="/chanson/create" method="post" enctype="multipart/form-data" class="formnouvellechanson">
+    <form action="/updateProfil/{{$utilisateur->id}}" method="post" enctype="multipart/form-data" class="formnouvellechanson">
+        @csrf
         <div class="txtb">
-            <input type="text" class="@error('text') error @enderror focus" name="password" autocomplete="offs" value="{{$utilisateur->username}}">
+            <input type="text" class="@error('text') error @enderror focus" name="username" autocomplete="offs" value="{{$utilisateur->username}}">
             <span data-placeholder="Username"></span>
         </div>
 
@@ -41,12 +54,12 @@
         <div class="ligneform">
             <div class="fileuplaod">
                 <label for="pdp" class="input-file-trigger"><img src="/images/icones/icon_addphoto.png" class="icon_music_add">Select a profil picture</label>
-                <input type="file" name="profil_pictures" id="pdp" class="input-file" accept="image/*">
+                <input type="file" name="pdp" id="pdp" class="input-file" accept="image/*">
                 <p class="file-return"></p>
             </div>
             <div class="fileuplaod">
                 <label for="pdc" class="input-file-trigger2"><img src="/images/icones/icon_addphoto.png" class="icon_music_add">Select a banner</label>
-                <input type="file" name="banner" id="pdc" class="input-file2" accept="image/*">
+                <input type="file" name="pdc" id="pdc" class="input-file2" accept="image/*">
                 <p class="file-return2"></p>
             </div>
 
@@ -56,6 +69,9 @@
 
     </form>
 </div>
+@else
+    tu n'as rien a faire ici !
 
+    @endif
 
 @endsection

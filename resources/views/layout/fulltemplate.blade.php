@@ -55,7 +55,7 @@
 
 
     </header>
-    <main data-barba="container" data-barba-namespace="home">
+ <main data-barba="container" data-barba-namespace="home">
     <nav>
 
 
@@ -87,6 +87,43 @@
 
 </div>
 </main>
+
+    <div class="popup_playlist">
+        <h2>Add to playlist</h2>
+        <img src="/images/icones/icon_croix.png" alt="croix-fermé" class="croix_ferme">
+        <div class="inner_playlist">
+            <div class="playlist_box">
+                <div class="playlist_img"></div>
+                <div class="playlist_name">Playlist 1</div>
+            </div>
+            <div class="playlist_box">
+                <div class="playlist_img"></div>
+                <div class="playlist_name">Playlist 1</div>
+            </div>
+            <div class="playlist_box">
+                <div class="playlist_img"></div>
+                <div class="playlist_name">Playlist 1</div>
+            </div>
+
+            <div class="playlist_box">
+                <div class="playlist_img"></div>
+                <div class="playlist_name">Playlist 1</div>
+            </div>
+            <div class="playlist_box">
+                <div class="playlist_img"></div>
+                <div class="playlist_name">Playlist 1</div>
+            </div>
+            <div class="playlist_box">
+                <div class="playlist_img"></div>
+                <div class="playlist_name">Playlist 1</div>
+            </div>
+            <div class="playlist_box">
+                <div class="playlist_img"></div>
+                <div class="playlist_name">add a playlist +</div>
+            </div>
+
+        </div>
+    </div>
     <div class="player">
         <div class="sound_desc_player">
             <div class="cover_music">
@@ -106,8 +143,8 @@
                     <button class="btn_play" onclick="playOrPauseSong()"><img src="/images/icones/play.png" alt="play" class="btn_play_img"></button>
                     <button class="btn_next"><img src="/images/icones/next.png"></button>
                 </div>
-                <a class="btn_like" href="#" data-pjax>
-                    <img class='btn_like_img' src="">
+                <a class="btn_like" href="#" >
+                    <img class='btn_like_img' id="btn_like" src="">
                 </a>
             </div>
             <div class="timeBar">

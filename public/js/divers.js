@@ -1,5 +1,5 @@
 
-//$(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container');
+
 
 
 
@@ -8,6 +8,10 @@ let currentTime = document.getElementById("currentTime")
 let totalTime = document.getElementById("totalTime");
 let volume = document.getElementById('volume');
 let icosound = document.getElementById('soundicon');
+let icolike = document.getElementById('btn_like');
+
+let icoclose = document.getElementById('croix_ferme')
+
 let song = new Audio();
 
 $(document).ready(function () {
@@ -28,6 +32,18 @@ $(document).ready(function () {
             $(this).removeClass('focus error');
         console.log('clique');
 
+    });
+
+    $('body').on("click",".btn_like", function(){
+        console.log('clique salut');
+        console.log(icolike.src);
+        if (icolike.src == "http://127.0.0.1:8000/images/icones/like_on.png" ){
+            icolike.src = "/images/icones/like.png";
+            console.log('to non like');
+        }else if(icolike.src == "http://127.0.0.1:8000/images/icones/like.png"){
+            icolike.src = "/images/icones/like_on.png";
+            console.log('to like');
+        }
     });
 
 
@@ -68,11 +84,13 @@ function playSong(url, id,author, name, img, liked){
     document.getElementById('name_singer_player').innerHTML = author;
     document.getElementById('image_player').src = img;
     document.querySelector('.btn_play_img').src = "/images/icones/pause.png";
-    if (liked){
-        document.querySelector('.btn_like_img').src = "/images/icones/like_on.png"
+    if (liked == "true"){
+        document.querySelector('.btn_like_img').src = "/images/icones/like_on.png";
+        console.log('liké');
     }
     else{
-        document.querySelector('.btn_like_img').src = "/images/icones/like.png"
+        document.querySelector('.btn_like_img').src = "/images/icones/like.png";
+        console.log('non-liké');
     }
 
 
@@ -138,8 +156,10 @@ function changementVolume(value) {
     }
     song.volume = value / 100;
     volume.style.background =
-        "linear-gradient(to right, #666666 0%, #666666 " + value + "%, #fff " + value + "%, white 100%)";
+        "linear-gradient(to right, #fff 0%, #fff " + value + "%, #666666 " + value + "%, #666666 100%)";
 }
+
+
 
 icosound.addEventListener("click", function() {
     if (volume.value > 0) {
@@ -162,6 +182,17 @@ volume.addEventListener('input', function(){
 });
 
 //////////////////////
+$('body').on('click','.croix_ferme', function(e) {
+    console.log('fermeeeee enculeé');
+    $('.popup_playlist').hide();
+
+});
+
+$('body').on('click','.btn_add_playlist', function(e) {
+    console.log('ouvre enculeé');
+    $('.popup_playlist').css('display','flex');
+
+});
 
 
 document.querySelector("html").classList.add('js');
@@ -199,6 +230,8 @@ button2.addEventListener( "click", function( event ) {
 fileInput2.addEventListener( "change", function( event ) {
     the_return2.innerHTML = this.value;
 });
+
+
 
 
 

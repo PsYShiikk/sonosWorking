@@ -89,7 +89,7 @@ body{
 .seek-bar{
     width: 100%;
     height: 5px;
-    background-color: white;
+    background-color:#666666;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -99,7 +99,7 @@ body{
 
 .fill{
     border-radius: 20px;
-    background-color: #666666;
+    background-color: #fff;
     height: 100%;
     width: 0%;
 }
@@ -185,7 +185,7 @@ button > img, .btn_like > img, .btn_add_playlist > img{
 }
 
 #volume{
-    background: linear-gradient(to right, #666666 0%, #666666 50%, #fff 50%, #fff 100%);
+    background: linear-gradient(to right,#fff  0%, #fff 50%, #666666 50%, #666666 100%);
     -webkit-appearance:none;
     border-radius: 20px;
     height: 5px;
@@ -672,10 +672,23 @@ button > img, .btn_like > img, .btn_add_playlist > img{
 
 }
 
-.preview_profile .pic img{
+.banner{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pic{
+    width: 220px;
+    height: 220px;
     border-radius: 1000px;
     border: 5px white solid;
-    width: 80%;
+    overflow: hidden;
+
+}
+.preview_profile .pic img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .profil_name_home{
@@ -739,7 +752,7 @@ padding: 10px 40px 10px 20px;
     display: block;
     width: 50px;
     height: 50px;
-    background: white;
+    background: #FAFAFA;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -748,6 +761,11 @@ padding: 10px 40px 10px 20px;
     right: 0;
     transition: all ease 0.3s;
     opacity: 0;
+    border-top-left-radius: 10px;
+}
+
+.modify_profil > img{
+    height: 50%;
 }
 
 .top_user_page:hover .modify_profil{
@@ -766,9 +784,18 @@ padding: 10px 40px 10px 20px;
 }
 
 .photo_de_profil{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.pdp{
     width: 200px;
+    height: 200px;
     border: white 4px solid;
     border-radius: 50%;
+    overflow: hidden;
 }
 
 /***** AJOUT DES CHANSONS ****/
@@ -952,6 +979,71 @@ padding: 10px 40px 10px 20px;
 .container_changementprofil > h2{
     margin-bottom: 80px ;
 }
+
+.popup_playlist{
+    background: white;
+    box-shadow: rgba(0,0,0,0.2) 5px 5px 10px;
+    padding: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 20;
+    width: 50%;
+    height: 500px;
+    border-radius: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+
+}
+
+.inner_playlist{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    overflow: scroll;
+    overflow-x:hidden;
+}
+
+
+.playlist_box{
+    width: 97%;
+    height: 80px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    transition: background .2s ease;
+}
+
+.playlist_box:hover{
+    background: #fafafa;
+}
+
+.playlist_img{
+    width: 80px;
+    height: 100%;
+    background: blue;
+}
+
+.playlist_name{
+    width: calc(100% - 80px);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.croix_ferme{
+    position: absolute;
+    height: 20px;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+
 
 
 

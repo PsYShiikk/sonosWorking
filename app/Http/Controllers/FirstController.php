@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Chanson;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class FirstController extends Controller
 {
@@ -59,7 +60,7 @@ class FirstController extends Controller
         $c->style = $request->input('style');
         $c->user_id = Auth::id();
         $c-> save();
-        return redirect("/utilisateur/".Auth::id());
+        return redirect("/musics/".Auth::id());
     }
 
     public function suivre($id){
@@ -93,6 +94,59 @@ class FirstController extends Controller
         $music = Chanson::whereRaw("nom like concat('%',?,'%')",[$s])->get();
         return view("firstcontroller.search", ['music' => $music ,'user' => $user]);
 
+    }
+
+    public function updatePeople(Request $request, $id){
+        $user = User::where('id', $id)->first();
+
+        $request->validate([
+            'username' => [
+                'required',
+                Rule::unique('users')->ignore(Auth::id()),
+                'max:255',
+                'min:3'
+        ],
+
+            'forename' => 'required|min:3|max:255',
+            'lastname' => 'required|min:3|max:255',
+            'pdp' => 'file',
+            'pdc' => 'file',
+        ]);
+
+
+
+
+        $username = $request->input('username');
+        $forename = $request->input('forename');
+        $lastname = $request->input('lastname');
+        if ($request->file('pdp')){
+            $pdp = $request -> file('pdp')->hashName();
+            $pdplien = "/uploads/".Auth::id()."/".$pdp;
+            $request->file('pdp')->move("uploads/".Auth::id(), $pdp);
+        }
+        else{
+            $pdplien = $user['avatar'];
+        }
+        if ($request->file('pdc')){
+            $pdc = $request -> file('pdc')->hashName();
+            $pdclien = "/uploads/".Auth::id()."/".$pdc;
+            $request->file('pdc')->move("uploads/".Auth::id(), $pdc);
+        }else{
+            $pdclien = $user['banner'];
+        }
+
+
+
+
+        User::where('id',$id)->update(array(
+            'username'=>$username,
+            'forename'=>$forename,
+            'lastname'=>$lastname,
+            'avatar'=>  $pdplien,
+            'banner'=>  $pdclien
+        ));
+
+        return redirect("/utilisateur/".Auth::id());
     }
 
 
