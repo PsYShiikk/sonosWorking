@@ -92,35 +92,11 @@
         <h2>Add to playlist</h2>
         <img src="/images/icones/icon_croix.png" alt="croix-fermé" class="croix_ferme">
         <div class="inner_playlist">
-            <div class="playlist_box">
-                <div class="playlist_img"></div>
-                <div class="playlist_name">Playlist 1</div>
-            </div>
-            <div class="playlist_box">
-                <div class="playlist_img"></div>
-                <div class="playlist_name">Playlist 1</div>
-            </div>
-            <div class="playlist_box">
-                <div class="playlist_img"></div>
-                <div class="playlist_name">Playlist 1</div>
-            </div>
-
-            <div class="playlist_box">
-                <div class="playlist_img"></div>
-                <div class="playlist_name">Playlist 1</div>
-            </div>
-            <div class="playlist_box">
-                <div class="playlist_img"></div>
-                <div class="playlist_name">Playlist 1</div>
-            </div>
-            <div class="playlist_box">
-                <div class="playlist_img"></div>
-                <div class="playlist_name">Playlist 1</div>
-            </div>
-            <div class="playlist_box">
-                <div class="playlist_img"></div>
-                <div class="playlist_name">add a playlist +</div>
-            </div>
+            @include('FirstController._playlists', ["playlists" => Auth::user()->playlists])
+            <a class="playlist_box_add" href="/nouvelle/playlist">
+                <div class="playlist_img add_playlist"><img src="/images/icones/icon_plus.png"></div>
+                <div class="playlist_name">Create a new playlist</div>
+            </a>
 
         </div>
     </div>

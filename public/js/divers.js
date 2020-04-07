@@ -34,6 +34,11 @@ $(document).ready(function () {
 
     });
 
+
+    $('body').on("click", ".playlist_box", function () {
+        $('.popup_playlist').hide()
+    });
+
     $('body').on("click",".btn_like", function(e){
         console.log('clique salut');
 
@@ -48,6 +53,16 @@ $(document).ready(function () {
             icolike.src = "/images/icones/like_on.png";
             console.log('to like');
         }
+    });
+
+    $('body').on("click",".playlist_box", function(e){
+
+
+        e.preventDefault();
+        $.get($(this).attr('href'));
+
+
+
     });
 
 
@@ -96,9 +111,33 @@ function playSong(url, id,author, name, img, liked){
         document.querySelector('.btn_like_img').src = "/images/icones/like.png";
         console.log('non-liké');
     }
+    let href = Array.from(document.querySelectorAll('.playlist_box'));
+    href.map(lien => {
 
+       let splitted = lien.href.split('/');
+       if (splitted.length >6){
+           console.log('faut changé la')
+           let splitted = lien.href.split('/');
+           splitted.pop();
+           let goodhref = splitted.join('/');
+           lien.href = goodhref;
+       }
+
+
+    });
+    for(let i=0; i<href.length;i++){
+        href[i].href = href[i].href + "/" + id;
+    }
 
     song.play();    // play the song
+
+
+    $('body').on('click','.btn_add_playlist', function(e) {
+        console.log('ouvre enculeé');
+        $('.popup_playlist').css('display','flex');
+
+
+    });
 }
 
 function playOrPauseSong(){
@@ -192,11 +231,6 @@ $('body').on('click','.croix_ferme', function(e) {
 
 });
 
-$('body').on('click','.btn_add_playlist', function(e) {
-    console.log('ouvre enculeé');
-    $('.popup_playlist').css('display','flex');
-
-});
 
 
 document.querySelector("html").classList.add('js');

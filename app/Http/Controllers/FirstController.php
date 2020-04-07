@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 
+use App\Playlist;
+use App\PlaylistContent;
 use Illuminate\Http\Request;
 use App\Chanson;
 use App\User;
@@ -68,10 +70,40 @@ class FirstController extends Controller
         return back();
     }
 
+    public function creerplaylist(Request $request)
+    {
+
+
+        $request->validate([
+            'name' => 'required|min:3|max:255',
+            'cover' => 'required|file',
+        ]);
+
+
+        $namecover = $request -> file('cover')->hashName();
+        $request->file('cover')->move("uploads/".Auth::id(), $namecover);
+
+
+
+
+        $c = new Playlist();
+        $c->user_id = Auth::id();
+        $c->name = $request->input('name');
+        $c->url_photo = "/uploads/".Auth::id()."/".$namecover;
+        $c-> save();
+        return redirect("/playlists/".Auth::id());
+    }
+
     public function mesmusiques($id){
         $u = User::findOrFail($id);
 
         return view("firstcontroller.mesmusiques", ['utilisateur' => $u]);
+    }
+
+    public function mesplaylists($id){
+        $u = User::findOrFail($id);
+
+        return view("firstcontroller.mesplaylists", ['utilisateur' => $u]);
     }
 
     public function mentionslegales(){
@@ -149,5 +181,17 @@ class FirstController extends Controller
         return redirect("/utilisateur/".Auth::id());
     }
 
+    public function nouvelleplaylist()
+    {
+        return view("firstcontroller.nouvelleplaylist");
+    }
+
+    public function addplaylist($id, $idmusic){
+        $c = new PlaylistContent();
+        $c->id_music = $idmusic;
+        $c->id_playlists = $id;
+        $c-> save();
+        return back();
+    }
 
 }
