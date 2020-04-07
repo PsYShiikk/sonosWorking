@@ -34,8 +34,12 @@ $(document).ready(function () {
 
     });
 
-    $('body').on("click",".btn_like", function(){
+    $('body').on("click",".btn_like", function(e){
         console.log('clique salut');
+
+        e.preventDefault();
+        $.get($(this).attr('href'));
+
         console.log(icolike.src);
         if (icolike.src == "http://127.0.0.1:8000/images/icones/like_on.png" ){
             icolike.src = "/images/icones/like.png";

@@ -26,6 +26,7 @@ function contentAnimation() {
 
 $(function() {
     barba.init({
+        prevent: ({ el }) => el.classList && el.classList.contains('prevent'),
         sync: true,
         transitions: [{
             async leave(data) {

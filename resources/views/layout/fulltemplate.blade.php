@@ -143,7 +143,7 @@
                     <button class="btn_play" onclick="playOrPauseSong()"><img src="/images/icones/play.png" alt="play" class="btn_play_img"></button>
                     <button class="btn_next"><img src="/images/icones/next.png"></button>
                 </div>
-                <a class="btn_like" href="#" >
+                <a class="btn_like" href="#" data-barba-prevent>
                     <img class='btn_like_img' id="btn_like" src="">
                 </a>
             </div>
