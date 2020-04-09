@@ -1,7 +1,15 @@
-@foreach($user as $u)
-    {{$u->username}}
+<div class="music_all">
+    @foreach($utilisateur as $c)
 
-@endforeach
-@foreach($music as $music)
-    {{$music->nom}}
-@endforeach
+        <div class="musicbox">
+            <a href="" class="img_music">
+                <img src="{{$c->avatar}}">
+            </a>
+            <a href="#" class="chanson">{{$c->forename}} {{$c->lastname}}</a>
+            <a href="#"><span>@</span>{{$c->username}}</a>
+
+
+        </div>
+
+    @endforeach
+</div>

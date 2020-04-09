@@ -1,11 +1,13 @@
 
-@foreach($playlists as $p)
+    <div class="music_all">
+        @foreach($playlist as $c)
 
-    <a class="playlist_box" href="/playlists/{{$utilisateur->id}}/{{$p->id}}" >
-        <div class="playlist_img"><img src="{{$p->url_photo}}"></div>
-        <div class="playlist_name">{{$p->name}}</div>
-    </a>
+            <div class="musicbox">
+                <a href="/playlists/{{$c->user_id}}/{{$c->id}}" class="img_music">
+                    <img src="{{$c->url_photo}}">
+                </a>
+                <a href="/playlists/{{$c->user_id}}/{{$c->id}}" class="chanson">{{$c->name}}</a>
+            </div>
 
-
-@endforeach
-
+        @endforeach
+    </div>
