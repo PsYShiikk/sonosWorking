@@ -32,6 +32,9 @@ Route::post('/playlist/create/{id_music}', 'FirstController@creerplaylist')->whe
 Route::get('/add/playlist/{id}/{idmusic}', 'FirstController@addplaylist')->where('id', '[0-9]+','idmusic', '[0-9]+')->middleware('auth');
 Route::get('/playlists/{id}/{idplaylist}', 'FirstController@laplaylist')->where('id', '[0-9]+','idmusic', '[0-9]+')->middleware('auth');
 
+Route::get('/all', 'FirstController@allmusic')->middleware('auth');
+Route::get('/liked', 'FirstController@allliked')->middleware('auth');
+
 Auth::routes();
 
 

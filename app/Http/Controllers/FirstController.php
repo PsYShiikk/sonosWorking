@@ -205,4 +205,20 @@ class FirstController extends Controller
        return view("firstcontroller.playlistaffichage", ['playlist' => $p]);
     }
 
+    public function allmusic(){
+        $crand = Chanson::inRandomOrder()->get();
+
+        return view("firstcontroller.allmusic", ['crand' => $crand]);
+
+
+    }
+
+    public function allliked(){
+        $crand = Auth::User()->jeLike()->inRandomOrder()->get();
+
+        return view("firstcontroller.allmusic", ['crand' => $crand]);
+
+
+    }
+
 }

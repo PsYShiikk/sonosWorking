@@ -7,7 +7,7 @@
         @if(Auth::id() == $utilisateur->id)
         <a href="/changementprofil/{{$utilisateur->id}}" class="modify_profil" data-pjax><img src="/images/icones/icon_modify.png" alt="icon modifier"></a>
         @endif
-        <div class="info_user">
+        <div class="info_user" id="info_user">
             <div class="pdp"><img src="{{$utilisateur->avatar}}" alt="photo de {{$utilisateur->username}}" class="photo_de_profil"></div>
 
             <span >{{$utilisateur->forename}} {{$utilisateur->lastname}}</span>
@@ -34,9 +34,9 @@
                 @auth
                     @if(Auth::id() != $utilisateur->id)
                         @if(Auth::user()->jeLesSuit->contains($utilisateur->id))
-                            <a href="/suivre/{{$utilisateur->id}}" class="btn follow">Following</a>
+                            <a href="/suivre/{{$utilisateur->id}}" class="btn follow" data-barba-prevent>Following</a>
                         @else
-                            <a href="/suivre/{{$utilisateur->id}}" class="btn follow">Follow</a>
+                            <a href="/suivre/{{$utilisateur->id}}" class="btn follow" data-barba-prevent>Follow</a>
                         @endif
                     @endif
                 @endauth
