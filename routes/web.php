@@ -33,3 +33,11 @@ Route::get('/add/playlist/{id}/{idmusic}', 'FirstController@addplaylist')->where
 Route::get('/playlists/{id}/{idplaylist}', 'FirstController@laplaylist')->where('id', '[0-9]+','idmusic', '[0-9]+')->middleware('auth');
 
 Auth::routes();
+
+
+
+Route::get('/{any}', function ($any) {
+
+    return response()->view('errors.404', [], 404);
+
+})->where('any', '.*');
