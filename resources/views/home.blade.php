@@ -56,6 +56,8 @@
             @include('FirstController._chansons', ["chansons" => $chanson = App\Chanson::inRandomOrder()->limit(5)->get()])
 
         </div>
+
+        @if(Auth::User()->jeLike()->count() > 0)
         <div class="liked_music">
             <div class="top_home_music">
                 <span class="title_home">Your liked musics</span>
@@ -64,6 +66,9 @@
             </div>
             @include('FirstController._chansons', ["chansons" => $chanson = Auth::User()->jeLike()->inRandomOrder()->limit(5)->get()])
         </div>
+        @else
+        @endif
+        @if(Auth::User()->playlists()->count())
         <div class="playlist_music">
             <div class="top_home_music">
                 <span class="title_home">Your playlists</span>
@@ -72,6 +77,8 @@
 
             @include('FirstController._noaddplaylists    ', ["playlist" => Auth::User()->playlists()->inRandomOrder()->limit(5)->get()])
         </div>
+        @else
+        @endif
     </div>
 
 

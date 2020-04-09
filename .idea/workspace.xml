@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de6d9d92-b3fc-48d8-bf6e-aaf155e69f0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/uploads/4/z2UW8oX7a6vl4F7xlpcCmFFvyUp1ogbjcnXYifbT.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/FirstController/allmusic.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FirstController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FirstController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/master.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/master.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/divers.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/divers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/FirstController/_noaddplaylists.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FirstController/_noaddplaylists.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/FirstController/_search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FirstController/_search.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/FirstController/mesplaylists.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FirstController/mesplaylists.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/FirstController/search.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FirstController/search.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/FirstController/utilisateur.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FirstController/utilisateur.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/fulltemplate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/fulltemplate.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +155,7 @@
       <workItem from="1586247658345" duration="10162000" />
       <workItem from="1586263652471" duration="3883000" />
       <workItem from="1586333299379" duration="45000" />
-      <workItem from="1586415738224" duration="12372000" />
+      <workItem from="1586415738224" duration="13000000" />
     </task>
     <servers />
   </component>
