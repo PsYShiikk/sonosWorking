@@ -159,7 +159,8 @@
     setInterval("$(\"#loader_get\").css( \"top\",\"-1000px\");", 1000);
     $("#searchform").submit(function (e) {
        e.preventDefault();
-       window.location.href="/search/"+e.target.elements[0].value;
+       if(e.target.elements[0].value.length > 1){
+       window.location.href="/search/"+e.target.elements[0].value;}
     })
 </script>
 

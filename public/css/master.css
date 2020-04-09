@@ -913,10 +913,11 @@ padding: 10px 40px 10px 20px;
     text-decoration: none;
 }
 
-.musicbox > a:first-of-type{
+.musicbox > a.chanson{
     color: #1C1C1C;
     text-decoration: none;
     margin: 10px 0;
+    text-align: center;
 
 }
 
@@ -1091,6 +1092,16 @@ padding: 10px 40px 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.container_home .music_all{
+    margin: 50px 0;
+}
+
+.link_home{
+    color: #BF85ED;
+    font-weight: 100;
+    text-decoration: none;
 }
 
 

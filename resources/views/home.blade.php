@@ -47,7 +47,7 @@
         <div class="random_music">
             <div class="top_home_music">
                 <span class="title_home">You could like these</span>
-                <a href="" class="link_home">show more</a>
+                <a href="/all" class="link_home">show more</a>
             </div>
 
 
@@ -59,16 +59,18 @@
         <div class="liked_music">
             <div class="top_home_music">
                 <span class="title_home">Your liked musics</span>
-                <a href="" class="link_home">show more</a>
+                <a href="/liked" class="link_home">show more</a>
+
             </div>
+            @include('FirstController._chansons', ["chansons" => $chanson = Auth::User()->jeLike()->inRandomOrder()->limit(5)->get()])
         </div>
         <div class="playlist_music">
             <div class="top_home_music">
                 <span class="title_home">Your playlists</span>
-                <a href="" class="link_home">show more</a>
+                <a href="/playlists/{{Auth::user()->id}}" class="link_home">show more</a>
             </div>
 
-            @include('FirstController._noaddplaylists    ', ["playlists" => Auth::User()->playlists])
+            @include('FirstController._noaddplaylists    ', ["playlist" => Auth::User()->playlists()->inRandomOrder()->limit(5)->get()])
         </div>
     </div>
 

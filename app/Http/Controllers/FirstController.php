@@ -102,7 +102,8 @@ class FirstController extends Controller
     public function search($s){
         $user = User::whereRaw("username like concat('%',?,'%')",[$s])->get();
         $music = Chanson::whereRaw("nom like concat('%',?,'%')",[$s])->get();
-        return view("firstcontroller.search", ['music' => $music ,'user' => $user]);
+        $playlist = Playlist::whereRaw("name like concat('%',?,'%')",[$s])->get();
+        return view("firstcontroller.search", ['music' => $music ,'user' => $user, 'playlist'=>$playlist]);
 
     }
 
@@ -202,6 +203,22 @@ class FirstController extends Controller
         $p = Playlist::findOrFail($idplaylist);
 
        return view("firstcontroller.playlistaffichage", ['playlist' => $p]);
+    }
+
+    public function allmusic(){
+        $crand = Chanson::inRandomOrder()->get();
+
+        return view("firstcontroller.allmusic", ['crand' => $crand]);
+
+
+    }
+
+    public function allliked(){
+        $crand = Auth::User()->jeLike()->inRandomOrder()->get();
+
+        return view("firstcontroller.allmusic", ['crand' => $crand]);
+
+
     }
 
 }

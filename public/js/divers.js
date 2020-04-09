@@ -61,13 +61,21 @@ $(document).ready(function () {
 
     $('body').on("click",".playlist_box", function(e){
 
-
         e.preventDefault();
         $.get($(this).attr('href'));
 
 
+    });
+
+    $('body').on("click",".follow", function(e){
+        e.preventDefault();
+        $.get($(this).attr('href'));
+
+        $("#info_user").load(location.href + " #info_user>*", "");
 
     });
+
+
 
 
 
