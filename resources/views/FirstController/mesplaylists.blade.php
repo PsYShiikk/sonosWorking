@@ -4,5 +4,5 @@
 
     <h2 class="center-music">Playlists of {{$utilisateur->username}}</h2>
 
-    @include('FirstController._playlists', ["playlists" => $utilisateur->playlists])
+    @include('FirstController._noaddplaylists    ', ["playlists" => $utilisateur->playlists])
 @endsection

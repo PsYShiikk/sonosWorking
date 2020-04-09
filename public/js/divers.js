@@ -39,6 +39,10 @@ $(document).ready(function () {
         $('.popup_playlist').hide()
     });
 
+    $('body').on("click", ".playlist_box_add", function () {
+        $('.popup_playlist').hide()
+    });
+
     $('body').on("click",".btn_like", function(e){
         console.log('clique salut');
 
@@ -105,11 +109,11 @@ function playSong(url, id,author, name, img, liked){
     document.querySelector('.btn_play_img').src = "/images/icones/pause.png";
     if (liked == "true"){
         document.querySelector('.btn_like_img').src = "/images/icones/like_on.png";
-        console.log('liké');
+
     }
     else{
         document.querySelector('.btn_like_img').src = "/images/icones/like.png";
-        console.log('non-liké');
+
     }
     let href = Array.from(document.querySelectorAll('.playlist_box'));
     href.map(lien => {
@@ -127,6 +131,24 @@ function playSong(url, id,author, name, img, liked){
     });
     for(let i=0; i<href.length;i++){
         href[i].href = href[i].href + "/" + id;
+    }
+
+    let href2 = Array.from(document.querySelectorAll('.playlist_box_add'));
+    href2.map(lien2 => {
+
+        let splitted = lien2.href.split('/');
+        if (splitted.length >5){
+            console.log('faut changé la')
+            let splitted2 = lien2.href.split('/');
+            splitted2.pop();
+            let goodhref2 = splitted2.join('/');
+            lien2.href = goodhref2;
+        }
+
+
+    });
+    for(let i=0; i<href2.length;i++){
+        href2[i].href = href2[i].href + "/" + id;
     }
 
     song.play();    // play the song

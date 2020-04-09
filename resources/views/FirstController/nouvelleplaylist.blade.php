@@ -14,7 +14,7 @@
         </div>
     @endif
 
-    <form action="/playlist/create" method="post" enctype="multipart/form-data" class="formnouvellechanson">
+    <form action="/playlist/create/{{ $id }}" method="post" enctype="multipart/form-data" class="formnouvellechanson">
         <h2>Create a playlist</h2>
 
         @csrf

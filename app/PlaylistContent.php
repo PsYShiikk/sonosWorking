@@ -15,4 +15,6 @@ class PlaylistContent extends Model
     public function playlist(){
         return $this->belongsTo("App\Playlist", "user_id");
     }
+
+
 }

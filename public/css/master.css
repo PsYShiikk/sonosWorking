@@ -878,12 +878,13 @@ padding: 10px 40px 10px 20px;
 
 .music_all{
     display: flex;
-    justify-content: space-between;
+    justify-content: baseline;
     flex-wrap: wrap;
     margin: 100px 0 100px 0;
 }
 .musicbox{
     flex-basis: 18%;
+    margin-right: 2%;
     display: flex;
     flex-direction: column;
     align-items: center;

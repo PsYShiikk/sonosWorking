@@ -70,29 +70,7 @@ class FirstController extends Controller
         return back();
     }
 
-    public function creerplaylist(Request $request)
-    {
 
-
-        $request->validate([
-            'name' => 'required|min:3|max:255',
-            'cover' => 'required|file',
-        ]);
-
-
-        $namecover = $request -> file('cover')->hashName();
-        $request->file('cover')->move("uploads/".Auth::id(), $namecover);
-
-
-
-
-        $c = new Playlist();
-        $c->user_id = Auth::id();
-        $c->name = $request->input('name');
-        $c->url_photo = "/uploads/".Auth::id()."/".$namecover;
-        $c-> save();
-        return redirect("/playlists/".Auth::id());
-    }
 
     public function mesmusiques($id){
         $u = User::findOrFail($id);
@@ -181,9 +159,35 @@ class FirstController extends Controller
         return redirect("/utilisateur/".Auth::id());
     }
 
-    public function nouvelleplaylist()
+    public function nouvelleplaylist($id_music)
     {
-        return view("firstcontroller.nouvelleplaylist");
+        return view("firstcontroller.nouvelleplaylist", ['id' => $id_music]);
+    }
+
+    public function creerplaylist(Request $request, $id_music)
+    {
+
+
+        $request->validate([
+            'name' => 'required|min:3|max:255',
+            'cover' => 'required|file',
+        ]);
+
+
+        $namecover = $request -> file('cover')->hashName();
+        $request->file('cover')->move("uploads/".Auth::id(), $namecover);
+
+
+
+
+        $p = new Playlist();
+        $p->user_id = Auth::id();
+        $p->name = $request->input('name');
+        $p->url_photo = "/uploads/".Auth::id()."/".$namecover;
+        $p-> save();
+
+        $p->chansons()->attach($id_music);
+        return redirect("/playlists/".Auth::id());
     }
 
     public function addplaylist($id, $idmusic){
@@ -192,6 +196,12 @@ class FirstController extends Controller
         $c->id_playlists = $id;
         $c-> save();
         return back();
+    }
+
+    public function laplaylist($id, $idplaylist){
+        $p = Playlist::findOrFail($idplaylist);
+
+       return view("firstcontroller.playlistaffichage", ['playlist' => $p]);
     }
 
 }

@@ -2,17 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de6d9d92-b3fc-48d8-bf6e-aaf155e69f0c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/FirstController/_playlists.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/FirstController/mesplaylists.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/FirstController/nouvelleplaylist.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/FirstController/_noaddplaylists.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/FirstController/playlistaffichage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FirstController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FirstController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Playlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Playlist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/PlaylistContent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/PlaylistContent.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/master.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/master.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/divers.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/divers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/fulltemplate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/fulltemplate.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/FirstController/mesplaylists.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FirstController/mesplaylists.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/FirstController/nouvelleplaylist.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FirstController/nouvelleplaylist.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +124,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/Documents/Web/wordpress" />
+    <property name="last_opened_file_path" value="D:/Documents/Web/rush" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -162,7 +161,10 @@
       <workItem from="1585811112544" duration="12891000" />
       <workItem from="1585825217363" duration="15872000" />
       <workItem from="1586019492938" duration="5585000" />
-      <workItem from="1586247658345" duration="9753000" />
+      <workItem from="1586247658345" duration="10162000" />
+      <workItem from="1586263652471" duration="3883000" />
+      <workItem from="1586333299379" duration="45000" />
+      <workItem from="1586415738224" duration="4032000" />
     </task>
     <servers />
   </component>
@@ -170,14 +172,18 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="188" key="FileChooserDialogImpl" timestamp="1585751226701">
+    <state x="549" y="188" key="FileChooserDialogImpl" timestamp="1586333342047">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="549" y="188" key="FileChooserDialogImpl/0.0.1536.864/1920.0.1600.900@0.0.1536.864" timestamp="1585751226701" />
-    <state x="610" y="458" key="NewPhpFileDialog" timestamp="1586253226670">
+    <state x="549" y="188" key="FileChooserDialogImpl/0.0.1536.864/1920.0.1600.900@0.0.1536.864" timestamp="1586333342047" />
+    <state x="531" y="248" key="NewPhpClassDialog" timestamp="1586265149678">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="610" y="458" key="NewPhpFileDialog/0.0.1536.864/1920.0.1600.900@0.0.1536.864" timestamp="1586253226670" />
+    <state x="531" y="248" key="NewPhpClassDialog/0.0.1536.864/1920.0.1600.900@0.0.1536.864" timestamp="1586265149678" />
+    <state x="610" y="458" key="NewPhpFileDialog" timestamp="1586266037830">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="610" y="458" key="NewPhpFileDialog/0.0.1536.864/1920.0.1600.900@0.0.1536.864" timestamp="1586266037830" />
     <state x="485" y="225" key="git4idea.merge.GitPullDialog" timestamp="1585815278078">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
