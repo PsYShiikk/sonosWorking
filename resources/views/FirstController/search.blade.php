@@ -2,6 +2,8 @@
 
 @section('contenu')
 
-@include('FirstController._search', ['utilisateur' => $user ,'music' => $music])
+{{ $music->count() }}
+@include('FirstController._search', ['utilisateur' => $user])
+@include('FirstController._chansons', ["chansons" => $music])
 
 @endsection

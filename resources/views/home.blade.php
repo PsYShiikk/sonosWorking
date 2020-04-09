@@ -1,8 +1,8 @@
 @extends('layout.template')
 
 @section('contenu')
-
-    <div class="preview_profile">
+    <div class="all_home">
+        <div class="preview_profile">
 
 
         <a href="/utilisateur/{{Auth::user()->id}}" class="pic" data-pjax>
@@ -32,6 +32,7 @@
         <span class="stats_home">{{Auth::user()->jeLesSuit()->count()}}
             @if(Auth::user()->jeLesSuit()->count() > 1)
                 followings
+
             @else
                 following
             @endif
@@ -39,6 +40,35 @@
         <div class="add_music_btn">
             <a href="/musics/{{Auth::user()->id}}" class="add_music" data-pjax><img src="/images/icones/icon_music.png" alt="icone_musique" class="icon_music_home">My music</a>
             <a href="/chanson/nouvelle" class="add_music" data-pjax><img src="/images/icones/icon_plus.png" alt="icone_ajout_musique" class="icon_music_home">Add a music</a>
+        </div>
+    </div>
+
+    <div class="container_home">
+        <div class="random_music">
+            <div class="top_home_music">
+                <span class="title_home">You could like these</span>
+                <a href="" class="link_home">show more</a>
+            </div>
+
+
+
+
+            @include('FirstController._chansons', ["chansons" => $chanson = App\Chanson::inRandomOrder()->limit(5)->get()])
+
+        </div>
+        <div class="liked_music">
+            <div class="top_home_music">
+                <span class="title_home">Your liked musics</span>
+                <a href="" class="link_home">show more</a>
+            </div>
+        </div>
+        <div class="playlist_music">
+            <div class="top_home_music">
+                <span class="title_home">Your playlists</span>
+                <a href="" class="link_home">show more</a>
+            </div>
+
+            @include('FirstController._noaddplaylists    ', ["playlists" => Auth::User()->playlists])
         </div>
     </div>
 
@@ -54,5 +84,6 @@
                         </div>
                     @endif
 
+    </div>
 
 @endsection

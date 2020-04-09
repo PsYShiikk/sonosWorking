@@ -1,7 +1,7 @@
-@foreach($user as $u)
+@foreach($utilisateur as $u)
     {{$u->username}}
 
 @endforeach
-@foreach($music as $music)
-    {{$music->nom}}
-@endforeach
+
+
+
