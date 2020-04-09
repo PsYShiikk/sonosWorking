@@ -48,12 +48,37 @@
 
     @if(Auth::id() == $utilisateur->id)
         <div class="container_user">
-        //page pour moi
+            @if($utilisateur->jeLike()->count() > 0)
+                <div class="liked_music">
+                    <div class="top_home_music">
+                        <span class="title_home">Your liked musics</span>
+                        <a href="/liked" class="link_home">show more</a>
+
+                    </div>
+                    @include('FirstController._chansons', ["chansons" => $chanson = $utilisateur->jeLike()->inRandomOrder()->limit(5)->get()])
+                </div>
+            @else
+            @endif
+            @if($utilisateur->playlists()->count())
+                <div class="playlist_music">
+                    <div class="top_home_music">
+                        <span class="title_home">Your playlists</span>
+                        <a href="/playlists/{{Auth::user()->id}}" class="link_home">show more</a>
+                    </div>
+
+                    @include('FirstController._noaddplaylists    ', ["playlist" => $utilisateur->playlists()->inRandomOrder()->limit(5)->get()])
+                </div>
+            @else
+            @endif
         </div>
     @else
         <div class="container_user">
-            <h2>His music</h2>
+            @if($utilisateur->chansons->count()!=0)
+                <span class="title_home">His music</span>
             @include('FirstController._chansons', ["chansons" => $utilisateur->chansons])
+                @else
+                <span class="title_home">Not music yet !</span>
+                @endif
         </div>
     @endif
 
