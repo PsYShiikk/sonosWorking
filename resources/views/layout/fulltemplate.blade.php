@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonos - The brand new music platform</title>
     <link rel="icon" type="image/png" href="/images/logo/ico.png" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -83,7 +84,7 @@
         <a class="footer_text" href="/legalnotice">Legal Notices</a><span class="footer_text pipe" data-pjax> | </span><a class="footer_text" href="#" data-pjax>Contact us</a><span class="footer_text pipe"> | </span><a class="footer_text" href="#" data-pjax>Social Medias</a>
     </div>
     <div class="bottomfooter">
-        <span class="footer_text">Copyright &copy - sonos.com - All right reserved</span>
+        <span class="footer_text footer_small">Copyright &copy - sonos.com - All right reserved</span>
     </div>
 
 </div>

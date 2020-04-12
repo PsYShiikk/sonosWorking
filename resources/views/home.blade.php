@@ -46,7 +46,7 @@
     <div class="container_home">
         <div class="random_music">
             <div class="top_home_music">
-                <span class="title_home">You could like these</span>
+                <span class="title_home">You could like</span>
                 <a href="/all" class="link_home">show more</a>
             </div>
 

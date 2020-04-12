@@ -17,7 +17,7 @@
 
 
 
-    <div class="first_text_home">
+    <div class="first_text_home second_div_home">
 
 
 

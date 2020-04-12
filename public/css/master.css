@@ -1,6 +1,7 @@
 body{
     padding: 0;
     margin: 0;
+    overflow-x: hidden ;
 
 }
 /*****PLAYER MUSIC******/
@@ -628,7 +629,7 @@ button > img, .btn_like > img, .btn_add_playlist > img{
     position: relative;
     width: 200px;
     height: 100%;
-    background: red;
+
 }
 
 .research_field > label{
@@ -1104,6 +1105,196 @@ padding: 10px 40px 10px 20px;
     color: #BF85ED;
     font-weight: 100;
     text-decoration: none;
+}
+
+.btn_next, .btn_prev{
+    display: none;
+}
+
+
+@media screen and (max-width: 900px) {
+    .home_btn{
+        width: 80%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .logo_accueil{
+        width: 50%;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    .first_text_home{
+        flex-direction: column;
+    }
+
+    .first_text_home > div{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .startnow{
+        margin: 40px 0;
+    }
+
+    .text_home, .text_home_bottom{
+        font-size: 30px;
+        text-align: center;
+    }
+    .img_home{
+        width: 85%;
+        padding-top: 85% ;
+        position: relative;
+        z-index: 20;
+    }
+
+    .intercalaire{
+        left: inherit;
+        top: -120px;
+        height: 80px;
+    }
+
+    .second_div_home{
+        margin-top: 80px;
+    }
+
+    .topfooter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pipe{
+        display: none;
+    }
+    .bottomfooter{
+        margin-top: 10px;
+    }
+    .footer_small{
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+
+    .formulaire_form{
+        width: 90%;
+    }
+
+
+    .rightheader{
+        width: auto;
+    }
+
+    .logo_loader{
+
+        width: 50vw!important;
+    }
+
+    .header{
+        flex-direction: column;
+        height: 100px;
+        padding: 20px;
+    }
+
+    .main{
+        margin-top: 30px;
+    }
+
+    .all_home{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .preview_profile{
+        align-items: center;
+        height: auto;
+        margin-bottom: 50px;
+    }
+
+    .add_music, .stats_home, .profil_username_home{
+        margin-left: 0;
+    }
+    .container_home, .container_user{
+        width: 90%;
+        padding: 0;
+    }
+
+    .musicbox{
+        flex-basis: 45%;
+        margin-right: 5%;
+    }
+
+
+    .modify_profil{
+        opacity: 1;
+    }
+
+    .formnouvellechanson{
+        width: 90%;
+    }
+
+    .input-file, .input-file2{
+        width: 45%;
+    }
+
+    .sound_player{
+        flex-direction: column;
+        margin-right:25px ;
+
+    }
+    .sound_desc_player{
+        padding: 0;
+        flex-direction: column;
+
+    }
+
+    .name_player{
+        display: none!important;
+    }
+
+    .cover_music{
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0px;
+    }
+
+    .timeBar{
+        display: none;
+    }
+
+    .popup_playlist{
+        width: 90%;
+    }
+
+    .btn_play{
+        background: white;
+    }
+
+    #volume{
+        width: 100%;
+    }
+    #soundicon{
+        margin: 0;
+    }
+
+    .btn_add_playlist, .btn_like{
+        height: 40px;
+        width: 40px;
+    }
+
+    .buttons_player{
+        width: 75%;
+    }
+
+
+
 }
 
 

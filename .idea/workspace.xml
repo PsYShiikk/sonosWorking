@@ -4,7 +4,8 @@
     <list default="true" id="de6d9d92-b3fc-48d8-bf6e-aaf155e69f0c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/master.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/master.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/FirstController/utilisateur.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FirstController/utilisateur.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/FirstController/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/FirstController/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/accueil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/accueil.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layout/fulltemplate.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/fulltemplate.blade.php" afterDir="false" />
@@ -160,7 +161,10 @@
       <workItem from="1586263652471" duration="3883000" />
       <workItem from="1586333299379" duration="45000" />
       <workItem from="1586415738224" duration="13681000" />
-      <workItem from="1586449784456" duration="1037000" />
+      <workItem from="1586449784456" duration="2521000" />
+      <workItem from="1586520942301" duration="76000" />
+      <workItem from="1586521259640" duration="46000" />
+      <workItem from="1586688710494" duration="4920000" />
     </task>
     <servers />
   </component>
