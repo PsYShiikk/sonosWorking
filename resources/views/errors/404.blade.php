@@ -1,7 +1,10 @@
 @extends('layout.template')
 
 @section('contenu')
-    <span>404</span>
+    <div class="errordiv">
+
+        <img src="/images/icones/404_1.png" alt="error 404">
+    </div>
 @endsection
 
 
