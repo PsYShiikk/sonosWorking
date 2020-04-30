@@ -23,7 +23,7 @@
 
     <nav class="container_all">
         <div class="header">
-            <a href="#" class="logo"><img src="/images/logo/logo_noir.png" class="logo"></a>
+            <a href="/" class="logo"><img src="/images/logo/logo_noir.png" class="logo"></a>
 
             <div class="rightheader">
                 <a href="/"><div class="btn home">
@@ -45,6 +45,8 @@
                 @if (Route::is('register'))
                     <a class="btn" href="{{ route('login') }}">{{ __('Login') }}</a>
                 @endif
+
+
             </div>
 
         </div>

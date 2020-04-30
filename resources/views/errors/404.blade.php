@@ -1,4 +1,4 @@
-@extends('layout.template')
+@extends('layout.form')
 
 @section('contenu')
     <div class="errordiv">

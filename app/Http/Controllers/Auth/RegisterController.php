@@ -78,6 +78,7 @@ class RegisterController extends Controller
             'avatar'=> "/images/profil_pictures/automatique.png",
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'banner'=> "/images/profil_pictures/automatiquebanner.png",
 
         ]);
 

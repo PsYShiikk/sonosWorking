@@ -1300,6 +1300,11 @@ padding: 10px 40px 10px 20px;
         width: 75%;
     }
 
+    .errordiv >img {
+        width: 100%;
+
+    }
+
 
 
 }

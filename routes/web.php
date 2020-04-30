@@ -12,21 +12,20 @@
 */
 
 Route::get('/', 'FirstController@index')->middleware('guest');
-Route::get('/article/{id}', 'FirstController@article')->where('id', '[0-9]+');
-Route::get('utilisateur/{id}','FirstController@utilisateur' )->where('id', '[0-9]+');
+Route::get('utilisateur/{id}','FirstController@utilisateur' )->where('id', '[0-9]+')->middleware('auth');
 Route::get('/chanson/nouvelle', 'FirstController@nouvellechanson')->middleware('auth'); //middleware (l'utilisateur doit forcément etre connecter pour voir cette route)
 Route::post('/chanson/create', 'FirstController@creerchanson')->middleware('auth');
-Route::get('/musics/{id}', 'FirstController@mesmusiques')->where('id', '[0-9]+');
+Route::get('/musics/{id}', 'FirstController@mesmusiques')->where('id', '[0-9]+')->middleware('auth');
 
 Route::get('/suivre/{id}', 'FirstController@suivre')->where('id', '[0-9]+')->middleware('auth');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/legalnotice', 'FirstController@mentionslegales');
 Route::get('/like/{id}', 'FirstController@like')->where('id', '[0-9]+')->middleware('auth');
 Route::get('/changementprofil/{id}', 'FirstController@changementprofil')->where('id', '[0-9]+')->middleware('auth');
-Route::get('/search/{s}', 'FirstController@search');
+Route::get('/search/{s}', 'FirstController@search')->middleware('auth');
 Route::post('/updateProfil/{id}', 'FirstController@updatePeople')->where('id', '[0-9]+')->middleware('auth');
 
-Route::get('/playlists/{id}', 'FirstController@mesplaylists')->where('id', '[0-9]+');
+Route::get('/playlists/{id}', 'FirstController@mesplaylists')->where('id', '[0-9]+')->middleware('auth');
 Route::get('/nouvelle/playlist/{id_music}', 'FirstController@nouvelleplaylist')->where('id_music', '[0-9]+')->middleware('auth');
 Route::post('/playlist/create/{id_music}', 'FirstController@creerplaylist')->where('id_music', '[0-9]+')->middleware('auth');
 Route::get('/add/playlist/{id}/{idmusic}', 'FirstController@addplaylist')->where('id', '[0-9]+','idmusic', '[0-9]+')->middleware('auth');
